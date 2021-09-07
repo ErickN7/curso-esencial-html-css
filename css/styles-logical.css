@@ -1,0 +1,159 @@
+:root {
+  font-size: 16px;
+  --white30: white;
+  --white20: #A5A3A5;
+  --white10: #3A3539;
+}
+
+body {
+  color: var(--white30);
+  font-family: 'Nunito', sans-serif;
+  background: #251F24;
+  margin: 0;
+}
+
+p{
+  color: var(--white20);
+}
+
+a {
+  color: var(--white30);
+}
+
+hr{
+  margin-block: 40px;
+  border-color: rgba(97, 97, 97, 0.2);
+}
+
+h1 {
+  font-size: 60px;
+  margin-block-start: 64px;
+  margin-block-end: 16px;
+}
+
+h2{
+  font-size: 2em;
+  margin-block: 40px;
+}
+
+h3{
+  font-size: 1.5em;
+  font-weight: 600;
+  margin-block: 16px;
+}
+
+.header{
+  position: sticky;
+  inset-block-start: -45px;
+}
+
+.header-content{
+  position: relative;
+  inset-block-start: 65px;
+}
+
+header {
+  font-size: 14px;
+  color: var(--white30);
+  position: absolute;
+  /* top */
+  inset-block-start: 0;
+  /* bottom */
+  /* inset-block-end: ; */
+  /* left */
+  inset-inline-start: -208px;
+  /* right */
+  /* inset-inline-end: ; */
+  inline-size: 188px;
+}
+
+header li{
+  color: var(--white20);
+  margin-block-end: 16px;
+}
+
+header a {
+  color: var(--white20);
+  text-decoration: none;
+}
+
+header a:hover {
+  color: var(--white30);
+}
+
+nav details summary {
+  font-weight: bold;
+}
+
+pre{
+  background: var(--white10);
+  padding: 40px;
+  overflow: auto;
+  border-radius: 8px;
+  border: 10px solid #5551FF;
+  box-shadow: -10px 10px 0 0 #ABAAF6;
+  margin-block-end: 30px;
+}
+
+.hero{
+  background: linear-gradient(96.07deg, #314755 30.63%, #26A0DA 102.18%);
+  height: 350px;
+}
+
+.section-content{
+  counter-reset: titleList; /*Reiniciar el counter de la variable declarado*/
+}
+
+.section-content h3{
+  counter-increment: titleList;/*Incremento de la variable*/
+}
+
+.section-content img {
+  margin-block-start: 40px;
+  display: block;
+  max-inline-size: 100%;
+}
+
+.section-content h3::before{
+  content: counter(titleList, decimal)'. ';
+}
+
+/* .section-content h3::after{
+  content: '';
+  width: 32px;
+  height: 4px;
+  background: var(--white30);
+  display: inline-block;
+} */
+
+.wrapper{
+  /* inline-size: 902px;width */
+  /* block-size: 100px;Height */
+  margin: auto;
+  max-inline-size: 902px;
+}
+
+blockquote {
+  line-height: 32px;
+  font-size: 24px;
+  margin-block-start: 80px;
+  margin-block-end: 63px;
+  background-color: var(--white10);
+  border-radius: 8px;
+  padding-inline-start: 24px;
+  padding-inline-end: 24px;
+  padding-block-start: 24px;
+  padding-block-end: 24px;
+}
+
+blockquote p {
+  color: var(--white30)
+}
+
+.main hr {
+  display: none;
+}
+
+.main-content{
+  padding-inline: 16px;
+}
